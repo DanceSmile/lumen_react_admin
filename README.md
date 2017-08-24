@@ -8,6 +8,12 @@
 
 可执行 npm install --production=false 取消默认行为
 
+## 更改端口配置
+
+创建 .env 文件  添加  PORT = 3009
+
+执行 npm run start .env
+
 
 > 默认使用 `npm install` 不会安装 devDependencies 里面的依赖
 
