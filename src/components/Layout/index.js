@@ -5,6 +5,8 @@ import "./index.css"
 import { Layout, Menu, Icon } from 'antd';
 const { Header, Sider, Content } = Layout;
 
+
+
 class SiderDemo extends React.Component {
   state = {
     collapsed: false,

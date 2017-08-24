@@ -1,3 +1,15 @@
+## 代码规范 
+
+- `类` 采用首字母大写的驼峰式命名 VarName
+
+- `类成员` 及 `类的方法` 采用首字母小写的驼峰形式  varName
+
+- `函数` 及 `类的参数` 采用小写加下划线方式 var_name
+
+- `普通函数` 及 `变量名` 采用小写加下划线方式  var_name
+
+
+
 ## devDependencies 和 Dependencies 区别
 
 在打包机上做构建，如果环境变量 NODE_ENV 设置为 production
@@ -8,14 +20,19 @@
 
 可执行 npm install --production=false 取消默认行为
 
+> 默认使用 `npm install` 不会安装 devDependencies 里面的依赖
+
 ## 更改端口配置
 
 创建 .env 文件  添加  PORT = 3009
 
 执行 npm run start .env
 
+---
 
-> 默认使用 `npm install` 不会安装 devDependencies 里面的依赖
+## 参考项目
+
+react-admin https://github.com/yezihaohao/react-admin
 
 
 此项目是由 [Create React App] 初始化创建 (https://github.com/facebookincubator/create-react-app).
