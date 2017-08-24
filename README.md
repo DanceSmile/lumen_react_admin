@@ -14,37 +14,37 @@
 
 此项目是由 [Create React App] 初始化创建 (https://github.com/facebookincubator/create-react-app).
 
-Below you will find some information on how to perform common tasks.<br>
-You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
+在下面会列举一些有关如何使用 `create-react-app` 执行常见的任务。.<br>
+你可以在这里找到这个指南的最新版本 [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
-## Table of Contents
+## creat-react-app 指南
 
-- [Updating to New Releases](#updating-to-new-releases)
-- [Sending Feedback](#sending-feedback)
-- [Folder Structure](#folder-structure)
-- [Available Scripts](#available-scripts)
+- [更新到新的版本](#updating-to-new-releases)
+- [发送反馈](#sending-feedback)
+- [文件夹结构](#folder-structure)
+- [可用的脚本](#available-scripts)
   - [npm start](#npm-start)
   - [npm test](#npm-test)
   - [npm run build](#npm-run-build)
   - [npm run eject](#npm-run-eject)
-- [Supported Language Features and Polyfills](#supported-language-features-and-polyfills)
-- [Syntax Highlighting in the Editor](#syntax-highlighting-in-the-editor)
+- [支持的语法和Polyfills](#supported-language-features-and-polyfills)
+- [在编辑器语法高亮显示](#syntax-highlighting-in-the-editor)
 - [Displaying Lint Output in the Editor](#displaying-lint-output-in-the-editor)
-- [Debugging in the Editor](#debugging-in-the-editor)
-- [Formatting Code Automatically](#formatting-code-automatically)
-- [Changing the Page `<title>`](#changing-the-page-title)
-- [Installing a Dependency](#installing-a-dependency)
-- [Importing a Component](#importing-a-component)
-- [Code Splitting](#code-splitting)
-- [Adding a Stylesheet](#adding-a-stylesheet)
+- [在编辑器中调试](#debugging-in-the-editor)
+- [自动格式化代码](#formatting-code-automatically)
+- [更改页面的 `<title>`](#changing-the-page-title)
+- [安装一个依赖](#installing-a-dependency)
+- [导出一个组件](#importing-a-component)
+- [代码分割](#code-splitting)
+- [添加style样式](#adding-a-stylesheet)
 - [Post-Processing CSS](#post-processing-css)
-- [Adding a CSS Preprocessor (Sass, Less etc.)](#adding-a-css-preprocessor-sass-less-etc)
-- [Adding Images, Fonts, and Files](#adding-images-fonts-and-files)
-- [Using the `public` Folder](#using-the-public-folder)
-  - [Changing the HTML](#changing-the-html)
+- [添加css预处理(Sass, Less etc.)](#adding-a-css-preprocessor-sass-less-etc)
+- [添加图片，字体，文件](#adding-images-fonts-and-files)
+- [使用 `public` 目录](#using-the-public-folder)
+  - [改变html](#changing-the-html)
   - [Adding Assets Outside of the Module System](#adding-assets-outside-of-the-module-system)
   - [When to Use the `public` Folder](#when-to-use-the-public-folder)
-- [Using Global Variables](#using-global-variables)
+- [使用全局变量](#using-global-variables)
 - [Adding Bootstrap](#adding-bootstrap)
   - [Using a Custom Theme](#using-a-custom-theme)
 - [Adding Flow](#adding-flow)
@@ -113,7 +113,7 @@ You can find the most recent version of this guide [here](https://github.com/fac
 ## 更新到新的版本
 
 Create React App is divided into two packages:
-创建一个React的应用需要两个包 
+创建一个React的应用需要两个包,分别是：
 
 
 * `create-react-app` 是一个全局的命令行工具，让你去创建你的应用.
@@ -131,13 +131,13 @@ In most cases bumping the `react-scripts` version in `package.json` and running 
 
 We commit to keeping the breaking changes minimal so you can upgrade `react-scripts` painlessly.
 
-## Sending Feedback
+## 发送反馈
 
-We are always open to [your feedback](https://github.com/facebookincubator/create-react-app/issues).
+我们总是接受 [你的意见](https://github.com/facebookincubator/create-react-app/issues).
 
-## Folder Structure
+## 文件夹结构
 
-After creation, your project should look like this:
+在初始化创建应用后，它的目录结构应该是这样的:
 
 ```
 my-app/
