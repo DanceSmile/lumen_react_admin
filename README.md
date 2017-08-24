@@ -12,7 +12,7 @@
 > 默认使用 `npm install` 不会安装 devDependencies 里面的依赖
 
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+此项目是由 [Create React App] 初始化创建 (https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
@@ -115,16 +115,13 @@ You can find the most recent version of this guide [here](https://github.com/fac
 Create React App is divided into two packages:
 创建一个React的应用需要两个包 
 
-* `create-react-app` is a global command-line utility that you use to create new projects.
+
 * `create-react-app` 是一个全局的命令行工具，让你去创建你的应用.
 
-* `react-scripts` is a development dependency in the generated projects (including this one).
-* `react-scripts` 在生成的项目中是一个开发的依赖包
+* `react-scripts` 在生成的项目中是一个开发的依赖包.
 
-You almost never need to update `create-react-app` itself: it delegates all the setup to `react-scripts`.
 你几乎不需要去更新 `create-react-app`, 因为它把所有的设置都委托给了 `react-scripts`
 
-When you run `create-react-app`, it always creates the project with the latest version of `react-scripts` so you’ll get all the new features and improvements in newly created apps automatically.
 当你运行使用 `create-react-app` 创建应用时，它总是会安装最新的 `react-scripts` 依赖，所以你会得到所有的新功能 并且 自动改进你的新创建的应用。
 
 To update an existing project to a new version of `react-scripts`, [open the changelog](https://github.com/facebookincubator/create-react-app/blob/master/CHANGELOG.md), find the version you’re currently on (check `package.json` in this folder if you’re not sure), and apply the migration instructions for the newer versions.
