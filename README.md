@@ -1,6 +1,11 @@
-在打包机上做构建，如果环境变量 NODE_ENV 设置为 production，执行 npm install 时 npm 默认不会安装 devDependencies，如果一定要设置 NODE_ENV 为 production，可执行 npm install --production=false 取消默认行为。
+## devDependencies 和 Dependencies 区别
 
+在打包机上做构建，如果环境变量 NODE_ENV 设置为 production
+执行 npm install 时 npm 默认不会安装 devDependencies
+如果一定要设置 NODE_ENV 为 production
+可执行 npm install --production=false 取消默认行为
 
+> 默认使用 `npm install` 不会安装 devDependencies 里面的依赖
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
