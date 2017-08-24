@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 
-import SierBar  from "./Componnent/Layout"
+import SierBar  from "./components/Layout"
 
 
 class App extends Component {

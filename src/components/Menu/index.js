@@ -1,7 +1,7 @@
 
 import React from "react"
 
-import { Layout, Menu, Icon } from 'antd';
+import {  Menu, Icon } from 'antd';
 
 const Menus = () => (
     <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
