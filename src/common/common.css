@@ -1,1 +1,5 @@
 @import '~antd/dist/antd.css';
+
+#root{
+    background:  rgb(236, 236, 236);
+}
