@@ -1,3 +1,14 @@
+## 自定义文件路径
+
+将src的路径自定义成@
+
+  resolve: {
+      extensions: ['.web.js', '.js', '.json', '.web.jsx', '.jsx'],
+      alias: {
+        '@': paths.appSrc
+      }
+  }
+
 ## 代码规范 
 
 - `类` 采用首字母大写的驼峰式命名 VarName
