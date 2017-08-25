@@ -1,3 +1,9 @@
+## 使用CSS Modules 解决css污染的问题
+
+参考文档 https://github.com/camsong/blog/issues/5
+
+
+
 ## 自定义文件路径
 
 将src的路径自定义成@
@@ -501,9 +507,10 @@ You can also use it with `async` / `await` syntax if you prefer it.
 
 If you are using React Router check out [this tutorial](http://serverless-stack.com/chapters/code-splitting-in-create-react-app.html) on how to use code splitting with it. You can find the companion GitHub repository [here](https://github.com/AnomalyInnovations/serverless-stack-demo-client/tree/code-splitting-in-create-react-app).
 
-## Adding a Stylesheet
+## 添加一段样式
 
-This project setup uses [Webpack](https://webpack.js.org/) for handling all assets. Webpack offers a custom way of “extending” the concept of `import` beyond JavaScript. To express that a JavaScript file depends on a CSS file, you need to **import the CSS from the JavaScript file**:
+项目设置使用 [Webpack](https://webpack.js.org/) 去处理 所有的资源. Webpack 提供了自定义的方式去在JavaScript的基础上扩展了 `import` . 实现了在javascript里面可以解析css样式, 
+但是需要导入css样式 **import the CSS from the JavaScript file**:
 
 ### `Button.css`
 
@@ -527,7 +534,7 @@ class Button extends Component {
 }
 ```
 
-**This is not required for React** but many people find this feature convenient. You can read about the benefits of this approach [here](https://medium.com/seek-ui-engineering/block-element-modifying-your-javascript-components-d7f99fcab52b). However you should be aware that this makes your code less portable to other build tools and environments than Webpack.
+使用这种方式去使用css样式 对于react来说不是唯一的方式，但是许多开发者发现这是一种最佳实践. You can read about the benefits of this approach [here](https://medium.com/seek-ui-engineering/block-element-modifying-your-javascript-components-d7f99fcab52b). However you should be aware that this makes your code less portable to other build tools and environments than Webpack.
 
 In development, expressing dependencies this way allows your styles to be reloaded on the fly as you edit them. In production, all CSS files will be concatenated into a single minified `.css` file in the build output.
 
@@ -536,8 +543,8 @@ If you are concerned about using Webpack-specific semantics, you can put all you
 ## Post-Processing CSS
 
 This project setup minifies your CSS and adds vendor prefixes to it automatically through [Autoprefixer](https://github.com/postcss/autoprefixer) so you don’t need to worry about it.
-
-For example, this:
+这个项目的css文件打包的时候将会被压缩 并且通过Autoprefixer自动加上css的前缀，所以你不需要对于这些东西担心
+例如:
 
 ```css
 .App {
@@ -564,7 +571,7 @@ becomes this:
 }
 ```
 
-If you need to disable autoprefixing for some reason, [follow this section](https://github.com/postcss/autoprefixer#disabling).
+如果你因为某些原因想禁止自动添加css前缀，请参考这里的设置, [follow this section](https://github.com/postcss/autoprefixer#disabling).
 
 ## 添加css的预处理 (Sass, Less etc.)
 
@@ -581,19 +588,19 @@ If you need to disable autoprefixing for some reason, [follow this section](http
 下面是一个演示例子
 我们将使用sass的预处理，但是你也可以是用less或者其他的替代
 
-首先让我们用命令行根据安装一下sass:
+首先让我们用npm命令行根据安装一下sass:
 
 ```sh
 npm install --save node-sass-chokidar
 ```
 
-Alternatively you may use `yarn`:
+你也可以使用 `yarn`:
 
 ```sh
 yarn add node-sass-chokidar
 ```
 
-Then in `package.json`, add the following lines to `scripts`:
+然后在  `package.json` 文件里面, 增加下面几行代码到 `scripts` :
 
 ```diff
    "scripts": {
@@ -604,9 +611,9 @@ Then in `package.json`, add the following lines to `scripts`:
      "test": "react-scripts test --env=jsdom",
 ```
 
->Note: To use a different preprocessor, replace `build-css` and `watch-css` commands according to your preprocessor’s documentation.
+>注 : 使用不同的预处理,请根据所使用的预处理文档替换 `build-css` 和 `watch-css` 的命令行  .
 
-Now you can rename `src/App.css` to `src/App.scss` and run `npm run watch-css`. The watcher will find every Sass file in `src` subdirectories, and create a corresponding CSS file next to it, in our case overwriting `src/App.css`. Since `src/App.js` still imports `src/App.css`, the styles become a part of your application. You can now edit `src/App.scss`, and `src/App.css` will be regenerated.
+现在我们把 `src/App.css` 改名为 `src/App.scss` 然后运行  `npm run watch-css`. The watcher will find every Sass file in `src` subdirectories, and create a corresponding CSS file next to it, in our case overwriting `src/App.css`. Since `src/App.js` still imports `src/App.css`, the styles become a part of your application. You can now edit `src/App.scss`, and `src/App.css` will be regenerated.
 
 To share variables between Sass files, you can use Sass imports. For example, `src/App.scss` and other component style files could include `@import "./shared.scss";` with variable definitions.
 
