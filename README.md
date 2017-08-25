@@ -613,7 +613,11 @@ yarn add node-sass-chokidar
 
 >注 : 使用不同的预处理,请根据所使用的预处理文档替换 `build-css` 和 `watch-css` 的命令行  .
 
-现在我们把 `src/App.css` 改名为 `src/App.scss` 然后运行  `npm run watch-css`. The watcher will find every Sass file in `src` subdirectories, and create a corresponding CSS file next to it, in our case overwriting `src/App.css`. Since `src/App.js` still imports `src/App.css`, the styles become a part of your application. You can now edit `src/App.scss`, and `src/App.css` will be regenerated.
+现在我们把 `src/App.css` 改名为 `src/App.scss` 然后运行  `npm run watch-css`. 
+这个监听器会找到 `src` 子目录下的所有Sass文件, 并且编译成对应的css文件, 我们现在改写一下 `src/App.css` 文件.
+当我们将 `src/App.css` 导入到 `src/App.js` 的时候 , 
+ `src/App.css` 的样式就成了我们应用的一部分。
+你可以编辑一下 `src/App.scss`, 然后 `src/App.css` 将会被重新生成.
 
 To share variables between Sass files, you can use Sass imports. For example, `src/App.scss` and other component style files could include `@import "./shared.scss";` with variable definitions.
 
