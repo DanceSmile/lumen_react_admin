@@ -2,12 +2,12 @@
 
 将src的路径自定义成@
 
-  resolve: {
-      extensions: ['.web.js', '.js', '.json', '.web.jsx', '.jsx'],
-      alias: {
-        '@': paths.appSrc
-      }
-  }
+    resolve: {
+        extensions: ['.web.js', '.js', '.json', '.web.jsx', '.jsx'],
+        alias: {
+          '@': paths.appSrc
+        }
+    }
 
 ## 代码规范 
 
@@ -45,6 +45,8 @@
 
 react-admin https://github.com/yezihaohao/react-admin
 
+
+---
 
 此项目是由 [Create React App] 初始化创建 (https://github.com/facebookincubator/create-react-app).
 
@@ -564,13 +566,22 @@ becomes this:
 
 If you need to disable autoprefixing for some reason, [follow this section](https://github.com/postcss/autoprefixer#disabling).
 
-## Adding a CSS Preprocessor (Sass, Less etc.)
+## 添加css的预处理 (Sass, Less etc.)
 
-Generally, we recommend that you don’t reuse the same CSS classes across different components. For example, instead of using a `.Button` CSS class in `<AcceptButton>` and `<RejectButton>` components, we recommend creating a `<Button>` component with its own `.Button` styles, that both `<AcceptButton>` and `<RejectButton>` can render (but [not inherit](https://facebook.github.io/react/docs/composition-vs-inheritance.html)).
+一般, 我们不推荐在不同的组件里面使用相同的css class名称。
 
-Following this rule often makes CSS preprocessors less useful, as features like mixins and nesting are replaced by component composition. You can, however, integrate a CSS preprocessor if you find it valuable. In this walkthrough, we will be using Sass, but you can also use Less, or another alternative.
+举例说明：
+在 `<AcceptButton>` 和 `<RejectButton>` 的组件里面 使用不同 `.Button` CSS class 名称，
 
-First, let’s install the command-line interface for Sass:
+我们更加推荐创建一个 带有 `.Button` 样式的 `<Button>` 的组件，这个组件同时被 `<AcceptButton>` and `<RejectButton>` 所使用，
+遵循这样的规则将使得css的预处理会变得更加的有用，
+使用一些特性例如 混合 或者 嵌套 去替换 组件的结构。
+显然这样是一个可行的方案，
+但是如果你整合了css的预处理会更加的高效
+下面是一个演示例子
+我们将使用sass的预处理，但是你也可以是用less或者其他的替代
+
+首先让我们用命令行根据安装一下sass:
 
 ```sh
 npm install --save node-sass-chokidar
