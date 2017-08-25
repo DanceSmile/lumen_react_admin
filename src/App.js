@@ -1,17 +1,14 @@
 import React, { Component } from 'react';
-import './App.css';
-
-
-import config  from "@/config"
 
 
 
-console.log(config.path)
+import Layout from "@/layouts/Layout.js"
 
 class App extends Component {
   render() {
     return (
-      <div > 
+      <div> 
+        <Layout />
       </div>
     );
   }
