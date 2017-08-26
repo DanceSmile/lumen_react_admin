@@ -15,26 +15,39 @@ import { Layout as AntLayout }  from 'antd'
 import { Header, Sider, Content, Footer, Menu } from "@/layouts"
 
 
-import "@/layouts/Layout.less"
 
-import  styles  from "@/layouts/Layout.less"
+// import  styles  from "@/layouts/Layout.less"
 
-console.log(styles)
 
 class Layout extends React.Component{
+
+    constructor(props){
+        super(props)
+        this.state = {
+            collapsed : false
+        }
+    }
+
+    toggle = () => {
+        this.setState({
+            collapsed: !this.state.collapsed,
+        });
+    }
 
     render(){
         return (
 
-                <AntLayout  className='ant-layout-has-sider layout'>
-                    <Sider menus = {Menu} >left sidebar</Sider>
+                <AntLayout  className='ant-layout-has-sider auto-height' >
+                    <Sider collapsed = {this.state.collapsed} >
+                        <Menu />
+                    </Sider>
                     <AntLayout>
-                        <Header  >header</Header>
+                        <Header  handleToggle = {this.toggle.bind(this)} >header</Header>
                         <Content>main content</Content>
+                        <Footer>React-Admin ©2017 Created by 1215850394@qq.com</Footer>
                     </AntLayout>
                 </AntLayout>
                 
-
         )
     }
 

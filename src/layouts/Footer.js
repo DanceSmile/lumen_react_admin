@@ -11,8 +11,8 @@ class Footer extends React.Component {
    render(){
 
         return (
-            <AntFooter>
-                Footer
+            <AntFooter style={{ textAlign: 'center' }} >
+                {this.props.children}
             </AntFooter>
         )
     }

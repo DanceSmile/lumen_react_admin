@@ -12,11 +12,7 @@ class Header extends React.Component {
         collapsed: false,
     };
 
-    toggle = () => {
-        this.setState({
-        collapsed: !this.state.collapsed,
-        });
-    }
+    
 
 
     render(){
@@ -26,6 +22,7 @@ class Header extends React.Component {
                 <Icon
                     className={styles.trigger}
                     type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
+                    onClick = {this.props.handleToggle}
                     
                 />
 

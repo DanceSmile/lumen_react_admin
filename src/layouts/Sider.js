@@ -1,6 +1,6 @@
 import React from "react"
 
-import { Layout,  Icon }  from 'antd'
+import { Layout }  from 'antd'
 
 import styles from  "@/layouts/Sider.less"
 
@@ -37,31 +37,25 @@ const {  Sider:AntSider  } = Layout;
 
 class Sider extends React.Component {
 
-    constructor(props){
-        super(props)
-    }
+   
 
 
     state = {
         collapsed: false,
     };
 
-    toggle = () => {
-        this.setState({
-        collapsed: !this.state.collapsed,
-        });
-    }
+   
 
     render(){
-        const Menu =  this.props.menus
         return (
             <AntSider
                 trigger={null}
                 collapsible
-                collapsed={this.state.collapsed}
+                collapsed={this.props.collapsed}
+                className = {styles.sider}
             >
                 <div className={styles.logo} />
-                <Menu />
+                {this.props.children}
             </AntSider>
         )
     }

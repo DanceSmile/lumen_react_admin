@@ -7,7 +7,7 @@ import Layout from "@/layouts/Layout.js"
 class App extends Component {
   render() {
     return (
-      <div> 
+      <div className = 'full-height' > 
         <Layout />
       </div>
     );
