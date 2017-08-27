@@ -1,6 +1,6 @@
 import React from "react"
 
-import { Layout, Breadcrumb }  from 'antd'
+import { Layout, Breadcrumb, Row, Col }  from 'antd'
 
  const {  Content:AntContent  } = Layout;
 
@@ -9,18 +9,30 @@ class Content extends React.Component {
 
 
     render(){
-
+        console.log(this.props.children)
         return (
-            <AntContent style={{ margin: '0 16px', overflow: 'initial' }} >
-                <Breadcrumb style = {{margin: '12px 0px'}}>
-                    <Breadcrumb.Item>Home</Breadcrumb.Item>
-                    <Breadcrumb.Item><a href="">Application Center</a></Breadcrumb.Item>
-                    <Breadcrumb.Item><a href="">Application List</a></Breadcrumb.Item>
-                    <Breadcrumb.Item>An Application</Breadcrumb.Item>
+            <AntContent  >
+                <Breadcrumb style={{
+                    height: "64px",
+                    lineHeight: "64px",
+                    padding: "0 24px",
+                    marginBottom: "-24px"
+                }}>
+                    <Breadcrumb.Item>首页</Breadcrumb.Item>
+                    <Breadcrumb.Item><a href="">表格</a></Breadcrumb.Item>
+                    <Breadcrumb.Item><a href="">基础表格</a></Breadcrumb.Item>
                 </Breadcrumb>
-                <div className='ant-content'>
-                        content
+
+                <div className="container">
+                
+                    <div className='ant-content content'>
+                        <div className="content-inner">
+                            {this.props.children}
+                        </div>
+
+                    </div>
                 </div>
+            
             </AntContent>
         )
     }

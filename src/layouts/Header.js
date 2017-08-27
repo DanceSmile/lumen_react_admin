@@ -8,6 +8,11 @@ const {  Header:AntHeader  } = Layout;
 
 class Header extends React.Component {
 
+    constructor (props){
+        super()
+        console.log(props)
+    }
+
     state = {
         collapsed: false,
     };

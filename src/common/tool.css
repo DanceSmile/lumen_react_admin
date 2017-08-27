@@ -7,3 +7,48 @@
     height:auto;
     min-height: 100%;
 }
+
+.gutter-row{
+    padding:0px 5px;
+}
+
+.gutter-box{
+    padding:5px 0px;
+}
+
+.container{
+    margin:24px;
+}
+
+
+.content{
+
+}
+
+
+.content-inner{
+
+    box-sizing: border-box;
+
+    padding: 24px;
+
+    background: #fff;
+
+}
+
+
+.panel{
+
+}
+
+.panel > .panel-head{
+
+}
+
+.panel > .panel-content {
+
+}
+
+.panel > .panel-foot {
+    
+}

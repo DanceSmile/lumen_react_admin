@@ -28,12 +28,14 @@ class Menu extends  React.Component {
                         <AntMent.Item key="11">面板</AntMent.Item>
                         <AntMent.Item key="12">按钮</AntMent.Item>
                         <AntMent.Item key="13">气泡</AntMent.Item>
-                        <AntMent.Item key="14">弹出式反馈</AntMent.Item>
+                        <AntMent.Item key="14">弹出式反馈</AntMent.Item> 
                         <AntMent.Item key="15">标签页</AntMent.Item>
                         <AntMent.Item key="16">文字提示</AntMent.Item>
                         <AntMent.Item key="17">编辑器</AntMent.Item>
+                       
                     </SubMenu>
 
+                    
 
                     <AntMent.Item key="4">
                         <Icon type="inbox" />
