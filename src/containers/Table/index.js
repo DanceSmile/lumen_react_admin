@@ -1,6 +1,11 @@
 import React from "react"
 
-import { Table as AntTable }  from "antd"
+import { Table as AntTable , Row , Col }  from "antd"
+
+import Panel from "@/components/Panel"
+
+
+
 
 
 const dataSource = [{
@@ -32,9 +37,15 @@ const columns = [{
 
 
 const Table = () => (
-    <div style={{background:'#fff',padding:"10px"}}>
-        <AntTable dataSource={dataSource} columns={columns} />
-    </div>    
+
+    <Row>
+      <Col span={24}>
+          <Panel title = "基础表格" >
+             <AntTable dataSource={dataSource} columns={columns} />
+          </Panel>
+      </Col>
+
+    </Row>    
 )
 
 

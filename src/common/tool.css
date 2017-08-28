@@ -27,17 +27,15 @@
 
 
 .content-inner{
-
     box-sizing: border-box;
-
-    padding: 24px;
-
-    background: #fff;
 
 }
 
 
 .panel{
+
+    margin:0px 8px;
+    padding: 6px 0px;
 
 }
 

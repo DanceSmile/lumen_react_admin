@@ -1,6 +1,6 @@
 import React from "react"
 
-import { Layout, Breadcrumb, Row, Col }  from 'antd'
+import { Layout, Breadcrumb, Row, Col, BackTop }  from 'antd'
 
  const {  Content:AntContent  } = Layout;
 
@@ -9,7 +9,7 @@ class Content extends React.Component {
 
 
     render(){
-        console.log(this.props.children)
+        
         return (
             <AntContent  >
                 <Breadcrumb style={{
@@ -32,6 +32,10 @@ class Content extends React.Component {
 
                     </div>
                 </div>
+
+                <div>
+                    <BackTop />
+                </div>,
             
             </AntContent>
         )
