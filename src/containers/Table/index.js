@@ -40,10 +40,17 @@ const dataSource = [
 ];
 
 
+
+
+
 const Table = () => (
 
     <Row>
       <Col span = {24}>
+          <Panel  title = '何时使用'>
+          当有大量结构化的数据需要展现时；<br/>
+          当需要对数据进行排序、搜索、分页、自定义操作等复杂行为时。
+          </Panel>
           <Panel >
             <p>
             按照 React 的规范，所有的组件数组必须绑定 key。<br/>
@@ -57,7 +64,11 @@ const Table = () => (
           <Panel title = "基础表格" >
              <AntTable dataSource={dataSource} columns={columns} />
           </Panel>
+           <Panel title = "基础表格" >
+             <AntTable dataSource={dataSource} columns={columns} />
+          </Panel>
       </Col>
+         
 
     </Row>    
 )
