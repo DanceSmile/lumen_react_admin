@@ -56,7 +56,7 @@ class Layout extends React.Component{
     render(){
         return (
 
-                <AntLayout  className='ant-layout-has-sider auto-height' >
+                <AntLayout  className='ant-layout-has-sider ' style={{height:'100vh'}}>
                     <Sider collapsed = {this.state.collapsed} >
                         <Menu />
                     </Sider>

@@ -53,6 +53,7 @@ class Sider extends React.Component {
                 collapsible
                 collapsed={this.props.collapsed}
                 className = {styles.sider}
+                style = {{overflow:"auto",height:"100vh"}}
             >
                 <div className={styles.logo} />
                 {this.props.children}

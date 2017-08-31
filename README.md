@@ -1,7 +1,11 @@
+## js 中this的指向问题
+
 ## 提取模块公共代码
 
 
 ##  await  async
+
+参考 http://es6.ruanyifeng.com/#docs/async
 
 ## margin 负值
 
