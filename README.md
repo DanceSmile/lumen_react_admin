@@ -1,3 +1,21 @@
+## js 中this的指向问题
+
+## 提取模块公共代码
+
+
+##  await  async
+
+参考 http://es6.ruanyifeng.com/#docs/async
+
+## margin 负值
+
+项目中经常会使用浮动列表展示信息，
+为了美观通常为每个列表之间设置一定的间距（margin-right）,
+当父元素的宽度固定式，每一行的最右端的li元素的右边距就多余了，
+去除的方法通常是为最右端的li添加class，设置margin-right:0; 
+这种方法需要动态判断为哪些li元素添加class，
+麻烦！！！利用负margin就可以实现：
+
 ## webpack中require-ensure和require-amd的区别
 
 webpack按需加载推荐方案
@@ -63,10 +81,21 @@ v3 -> v4 http://www.jianshu.com/p/ece5d02ccbcf
 
 ---
 
-## 参考项目
+## 项目架构
+
+项目使用antd
+ 
+脚手架使用create-react-app
+
+layout  使用antd默认的
+
+路由使用  react-router-v4
+
+使用redux共享数据
 
 react-admin https://github.com/yezihaohao/react-admin
 bear admin http://huzzbuzz.coding.me/bear-admin/#/?_k=pebp3a
+使用 lumen 提供api数据
 
 
 ---
