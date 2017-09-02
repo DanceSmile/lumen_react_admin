@@ -66,6 +66,7 @@ v3 -> v4 http://www.jianshu.com/p/ece5d02ccbcf
 ## 参考项目
 
 react-admin https://github.com/yezihaohao/react-admin
+bear admin http://huzzbuzz.coding.me/bear-admin/#/?_k=pebp3a
 
 
 ---
