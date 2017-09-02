@@ -16,6 +16,15 @@
     padding:5px 0px;
 }
 
+
+.panel{
+
+    margin:0px 8px;
+    padding: 6px 0px;
+
+}
+
+
 .container{
     margin:24px;
 }
@@ -24,6 +33,8 @@
 .content{
 
 }
+
+
 
 
 .content-inner{
