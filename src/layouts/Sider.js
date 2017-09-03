@@ -55,7 +55,9 @@ class Sider extends React.Component {
                 className = {styles.sider}
                 style = {{overflow:"auto",height:"100vh"}}
             >
-                <div className={styles.logo} />
+                <div className={styles.logo} >
+                    React 后台解决方案
+                </div>
                 {this.props.children}
             </AntSider>
         )

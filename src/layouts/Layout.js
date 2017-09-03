@@ -44,7 +44,6 @@ class Layout extends React.Component{
         this.state = {
             collapsed : false
         }
-        console.log(props)
     }
 
     toggle = () => {
@@ -55,7 +54,6 @@ class Layout extends React.Component{
 
     render(){
         return (
-
                 <AntLayout  className='ant-layout-has-sider ' style={{height:'100vh'}}>
                     <Sider collapsed = {this.state.collapsed} >
                         <Menu />
@@ -63,11 +61,9 @@ class Layout extends React.Component{
                     <AntLayout>
                         <Header  handleToggle = {this.toggle.bind(this)} >header</Header>
                         <Content>
-
                             <LayoutRoutes />
-
                         </Content>
-                        <Footer>React-Admin ©2017 Created by 1215850394@qq.com</Footer>
+                        <Footer>感谢 antd-design 为开源做出的贡献</Footer>
                     </AntLayout>
                 </AntLayout>
                 

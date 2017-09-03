@@ -1,63 +1,7 @@
-.full-height{
-    height: 100%;
-    min-height: 100%;
+.pull-left {
+  float: left;
 }
 
-.auto-height{
-    height:auto;
-    min-height: 100%;
-}
-
-.gutter-row{
-    padding:0px 5px;
-}
-
-.gutter-box{
-    padding:5px 0px;
-}
-
-
-.panel{
-
-    margin:0px 8px;
-    padding: 6px 0px;
-
-}
-
-
-.container{
-    margin:24px;
-}
-
-
-.content{
-
-}
-
-
-
-
-.content-inner{
-    box-sizing: border-box;
-
-}
-
-
-.panel{
-
-    margin:0px 8px;
-    padding: 6px 0px;
-
-}
-
-.panel > .panel-head{
-
-}
-
-.panel > .panel-content {
-
-}
-
-.panel > .panel-foot {
-    
+.pull-right {
+  float: right;
 }

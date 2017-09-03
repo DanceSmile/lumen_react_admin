@@ -2,6 +2,8 @@ import React from "react"
 
 import { Menu as AntMent, Icon }  from "antd"
 
+import { route, Link } from 'react-router-dom'
+
 const SubMenu = AntMent.SubMenu;
 
 
@@ -17,12 +19,22 @@ class Menu extends  React.Component {
               inlineCollapsed={false}
           >
                     <AntMent.Item key="1">
-                        <Icon type="pie-chart" />
-                        <span>概览</span>
+                        <Link to = "/" >
+                            <Icon type="pie-chart" />
+                            <span>概览</span>
+                        </Link>
                     </AntMent.Item>
                     <AntMent.Item key="2">
-                        <Icon type="desktop" />
-                        <span>布局</span>
+                        <Link to = "/panel" >
+                             <Icon type="desktop" />
+                              <span>面板</span>
+                        </Link>
+                    </AntMent.Item>
+                    <AntMent.Item key="3">
+                        <Link to = "/table" >
+                             <Icon type="desktop" />
+                              <span>表格</span>
+                        </Link>
                     </AntMent.Item>
                     <SubMenu key="sub1" title={<span><Icon type="mail" /><span>UI元素</span></span>}>
                         <AntMent.Item key="11">面板</AntMent.Item>
@@ -32,7 +44,6 @@ class Menu extends  React.Component {
                         <AntMent.Item key="15">标签页</AntMent.Item>
                         <AntMent.Item key="16">文字提示</AntMent.Item>
                         <AntMent.Item key="17">编辑器</AntMent.Item>
-                       
                     </SubMenu>
 
                     

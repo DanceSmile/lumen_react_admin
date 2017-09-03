@@ -2,7 +2,10 @@ import React from "react"
 
 import { Layout, Breadcrumb, Row, Col, BackTop }  from 'antd'
 
+import styles from "@/layouts/Content.less"
+
  const {  Content:AntContent  } = Layout;
+
 
 class Content extends React.Component {
 
@@ -12,18 +15,13 @@ class Content extends React.Component {
         
         return (
             <AntContent  >
-                <Breadcrumb style={{
-                    height: "64px",
-                    lineHeight: "64px",
-                    padding: "0 24px",
-                    marginBottom: "-24px"
-                }}>
+                <Breadcrumb className = {styles.breadcrumb} >
                     <Breadcrumb.Item>首页</Breadcrumb.Item>
                     <Breadcrumb.Item><a href="">表格</a></Breadcrumb.Item>
                     <Breadcrumb.Item><a href="">基础表格</a></Breadcrumb.Item>
                 </Breadcrumb>
 
-                <div className="container">
+                <div className={styles.container}>
                 
                     <div className='ant-content content'>
                         <div className="content-inner">
@@ -35,7 +33,7 @@ class Content extends React.Component {
 
                 <div>
                     <BackTop />
-                </div>,
+                </div>
             
             </AntContent>
         )

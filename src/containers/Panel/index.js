@@ -10,7 +10,7 @@ const Panels = () => (
     <div>
         <Row >
             <Col span = {6}  >
-                <Panel title = "基础卡片">
+                <Panel title = "基础面板">
                     <p>
                         最基础的面板容器，可承载文字、列表、图片、段落，常用于后台概览页面。
                     </p>

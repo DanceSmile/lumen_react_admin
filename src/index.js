@@ -15,7 +15,8 @@ import Layout from "@/layouts/Layout.js";
 
 
 
-import "@/bootstrap"
+import "@/common/common.css"
+import "@/common/tool.css"
 
 
 
