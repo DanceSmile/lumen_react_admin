@@ -214,7 +214,9 @@ class Table extends React.Component{
               当有大量结构化的数据需要展现时；<br/>
               当需要对数据进行排序、搜索、分页、自定义操作等复杂行为时。
               </Panel>
-              <Panel >
+          </Col>
+          <Col span = {24}>
+            <Panel >
                 <p>
                 按照 React 的规范，所有的组件数组必须绑定 key。<br/>
                 在 Table 中，dataSource 和 columns 里的数据值都需要指定 key 值。<br/>
@@ -223,6 +225,7 @@ class Table extends React.Component{
                 若没有指定，控制台会出现以下的提示，表格组件也会出现各类奇怪的错误。</p>
               </Panel>
           </Col>
+
           <Col span={24}>
               <Panel title = "基础表格" >
                 <AntTable columns={columns} dataSource={data} />
@@ -242,6 +245,7 @@ class Table extends React.Component{
                 <AntTable rowSelection = { rowSelection } columns={columns} dataSource={data} />
               </Panel>
           </Col>
+         
         </Row>    
   )
   }

@@ -2,7 +2,7 @@ import React from "react"
 
 import { Layout }  from 'antd'
 
-import styles from  "@/layouts/Sider.less"
+import styles from  "@/layouts/Sider.mod"
 
 
 const {  Sider:AntSider  } = Layout;
@@ -52,11 +52,12 @@ class Sider extends React.Component {
                 trigger={null}
                 collapsible
                 collapsed={this.props.collapsed}
-                className = {styles.sider}
-                style = {{overflow:"auto",height:"100vh"}}
+                style = {
+                    this.props.collapsed?{}:{height:"100vh",overflowY:'auto'}
+                }
             >
                 <div className={styles.logo} >
-                    React 后台解决方案
+                    
                 </div>
                 {this.props.children}
             </AntSider>
