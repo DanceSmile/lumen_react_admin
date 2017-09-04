@@ -17,7 +17,7 @@ const Panels = () => (
                 </Panel>
             </Col>
             <Col span = {6}>
-                <Panel title="带角标的面板" extra={<a href="#">More</a>} >
+                <Panel title="带角标的面板" extra={<a href="">More</a>} >
                      <p>
                             带角标的面板，可承载文字、列表、图片、段落，常用于后台概览页面。
                       </p> 
