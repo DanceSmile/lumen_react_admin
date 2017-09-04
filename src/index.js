@@ -15,8 +15,8 @@ import Layout from "@/layouts/Layout.js";
 
 
 
-import "@/common/common.css"
-import "@/common/tool.css"
+import "@/common/common.less"
+import "@/common/tool.less"
 
 
 

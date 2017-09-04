@@ -1,5 +1,4 @@
 'use strict';
-const { injectBabelPlugin } = require('react-app-rewired');
 const autoprefixer = require('autoprefixer');
 const path = require('path');
 const webpack = require('webpack');
