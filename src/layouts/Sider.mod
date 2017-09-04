@@ -6,9 +6,9 @@
   line-height: 32px;
   text-align: center;
   color: #fff;
+  overflow: hidden;
 }
 
 .sider{
-  height:auto;
-  min-height: 100%;
+  
 }

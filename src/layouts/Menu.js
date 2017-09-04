@@ -2,7 +2,7 @@ import React from "react"
 
 import { Menu as AntMent, Icon }  from "antd"
 
-import { route, Link } from 'react-router-dom'
+import {  Link } from 'react-router-dom'
 
 const SubMenu = AntMent.SubMenu;
 
@@ -12,8 +12,8 @@ class Menu extends  React.Component {
     render(){
         return (
             <AntMent 
-              defaultSelectedKeys={[]}
-              defaultOpenKeys={[]}
+              defaultSelectedKeys={['asdsad']}
+              defaultOpenKeys={['asdsad']}
               mode="inline"
               theme="dark"
               inlineCollapsed={false}
@@ -36,25 +36,18 @@ class Menu extends  React.Component {
                               <span>表格</span>
                         </Link>
                     </AntMent.Item>
-                    <SubMenu key="sub1" title={<span><Icon type="mail" /><span>UI元素</span></span>}>
-                        <AntMent.Item key="11">面板</AntMent.Item>
-                        <AntMent.Item key="12">按钮</AntMent.Item>
-                        <AntMent.Item key="13">气泡</AntMent.Item>
-                        <AntMent.Item key="14">弹出式反馈</AntMent.Item> 
-                        <AntMent.Item key="15">标签页</AntMent.Item>
-                        <AntMent.Item key="16">文字提示</AntMent.Item>
-                        <AntMent.Item key="17">编辑器</AntMent.Item>
-                    </SubMenu>
-
-                    
-
                     <AntMent.Item key="4">
-                        <Icon type="inbox" />
-                        <span>数据</span>
+                        <Link to = "/button" >
+                             <Icon type="desktop" />
+                              <span>按钮</span>
+                        </Link>
                     </AntMent.Item>
+                  
                     <AntMent.Item key="5">
-                        <Icon type="inbox" />
-                        <span>表单</span>
+                         <Link to = "/form" >
+                              <Icon type="inbox" />
+                            <span>表单</span>
+                        </Link>
                     </AntMent.Item>
                     <AntMent.Item key="6">
                         <Icon type="inbox" />

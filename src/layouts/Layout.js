@@ -1,17 +1,17 @@
 import React from "react"
 
-import { Layout as AntLayout }  from 'antd'
-
-import { Route } from "react-router-dom"
+import { Layout as AntLayout, BackTop }  from 'antd'
 
 
-import Dashboard from "@/containers/Dashboard"
-import Data from "@/containers/Data"
-import Panel from "@/containers/Panel"
-import Form from "@/containers/Form"
-import Table from "@/containers/Table"
-import Page from "@/containers/Page"
-import Flex from "@/containers/Flex"
+
+
+// import Dashboard from "@/containers/Dashboard"
+// import Data from "@/containers/Data"
+// import Panel from "@/containers/Panel"
+// import Form from "@/containers/Form"
+// import Table from "@/containers/Table"
+// import Page from "@/containers/Page"
+// import Flex from "@/containers/Flex"
 
 
 import { LayoutRoutes } from "@/routes"
@@ -34,9 +34,6 @@ import { Header, Sider, Content, Footer, Menu } from "@/layouts"
 
 
 
-// import  styles  from "@/layouts/Layout.less"
-
-
 class Layout extends React.Component{
 
     constructor(props) {
@@ -54,7 +51,7 @@ class Layout extends React.Component{
 
     render(){
         return (
-                <AntLayout  className='ant-layout-has-sider ' style={{height:'100vh'}}>
+                <AntLayout  className='ant-layout-has-sider '  style={{height:'100%'}}>
                     <Sider collapsed = {this.state.collapsed} >
                         <Menu />
                     </Sider>
@@ -64,6 +61,9 @@ class Layout extends React.Component{
                             <LayoutRoutes />
                         </Content>
                         <Footer>感谢 antd-design 为开源做出的贡献</Footer>
+                        <div>
+                            <BackTop />
+                        </div>
                     </AntLayout>
                 </AntLayout>
                 

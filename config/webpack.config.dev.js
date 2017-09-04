@@ -11,6 +11,8 @@ const eslintFormatter = require('react-dev-utils/eslintFormatter');
 const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
 const getClientEnvironment = require('./env');
 const paths = require('./paths');
+const defaultConfig = require('./webpack.config.default.js');
+
 
 // Webpack uses `publicPath` to determine where the app is being served from.
 // In development, we always serve from the root. This makes config easier.
@@ -25,7 +27,7 @@ const env = getClientEnvironment(publicUrl);
 // This is the development configuration.
 // It is focused on developer experience and fast rebuilds.
 // The production configuration is different and lives in a separate file.
-module.exports = {
+const config = {
   // You may want 'eval' instead if you prefer to see the compiled output in DevTools.
   // See the discussion in https://github.com/facebookincubator/create-react-app/issues/343.
   devtool: 'cheap-module-source-map',
@@ -110,10 +112,12 @@ module.exports = {
   module: {
     strictExportPresence: true,
     rules: [
+      
+
       // TODO: Disable require.ensure as it's not a standard language feature.
       // We are waiting for https://github.com/facebookincubator/create-react-app/issues/2176.
       // { parser: { requireEnsure: false } },
-
+      
       // First, run the linter.
       // It's important to do this before Babel processes the JS.
       {
@@ -162,46 +166,7 @@ module.exports = {
           },
 
           // Parse less files and modify variables
-
-          {
-            test: /\.less$/,
-            use: [
-              require.resolve('style-loader'),
-              {
-                loader: 'css-loader?modules',
-                options: {
-                  importLoaders: 1,
-                  modules: true
-                },
-              },
-              {
-                loader: require.resolve('postcss-loader'),
-                options: {
-                  // Necessary for external CSS imports to work
-                  // https://github.com/facebookincubator/create-react-app/issues/2677
-                  ident: 'postcss',
-                  plugins: () => [
-                    require('postcss-flexbugs-fixes'),
-                    autoprefixer({
-                      browsers: [
-                        '>1%',
-                        'last 4 versions',
-                        'Firefox ESR',
-                        'not ie < 9', // React doesn't support IE8 anyway
-                      ],
-                      flexbox: 'no-2009',
-                    }),
-                  ],
-                },
-              },
-              {
-                    loader: require.resolve('less-loader'),
-                    options: {
-                        modifyVars: { "@primary-color": "#404040" },
-                    },
-              }
-            ],
-          },
+          defaultConfig,
           // "postcss" loader applies autoprefixer to our CSS.
           // "css" loader resolves paths in CSS and adds assets as dependencies.
           // "style" loader turns CSS into JS modules that inject <style> tags.
@@ -310,3 +275,6 @@ module.exports = {
     hints: false,
   },
 };
+
+
+module.exports = config

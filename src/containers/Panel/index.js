@@ -66,6 +66,74 @@ const Panels = () => (
                </Panel>
 
             </Col>
+
+             <Col span = {4}>
+                <Panel  bodyStyle={{padding:'0px'}}>
+                    <div>
+                        <img alt="example" width="100%" src="http://huzzbuzz.coding.me/bear-admin/static/media/profile.8f43034a.jpg" />
+                    </div>
+                    <div style = {{padding:'10px  16px'}}>
+                        <h3>Europe Street beat</h3>
+                        <p>www.instagram.com</p>
+                    </div>
+                </Panel>
+            </Col>
+              <Col span = {4}>
+                <Panel  bodyStyle={{padding:'0px'}}>
+                    <div>
+                        <img alt="example" width="100%" src="http://huzzbuzz.coding.me/bear-admin/static/media/profile.8f43034a.jpg" />
+                    </div>
+                    <div style = {{padding:'10px  16px'}}>
+                        <h3>Europe Street beat</h3>
+                        <p>www.instagram.com</p>
+                    </div>
+                </Panel>
+            </Col>
+              <Col span = {4}>
+                <Panel  bodyStyle={{padding:'0px'}}>
+                    <div>
+                        <img alt="example" width="100%" src="http://huzzbuzz.coding.me/bear-admin/static/media/profile.8f43034a.jpg" />
+                    </div>
+                    <div style = {{padding:'10px  16px'}}>
+                        <h3>Europe Street beat</h3>
+                        <p>www.instagram.com</p>
+                    </div>
+                </Panel>
+            </Col>
+              <Col span = {4}>
+                <Panel  bodyStyle={{padding:'0px'}}>
+                    <div>
+                        <img alt="example" width="100%" src="http://huzzbuzz.coding.me/bear-admin/static/media/profile.8f43034a.jpg" />
+                    </div>
+                    <div style = {{padding:'10px  16px'}}>
+                        <h3>Europe Street beat</h3>
+                        <p>www.instagram.com</p>
+                    </div>
+                </Panel>
+            </Col>
+              <Col span = {4}>
+                <Panel  bodyStyle={{padding:'0px'}}>
+                    <div>
+                        <img alt="example" width="100%" src="http://huzzbuzz.coding.me/bear-admin/static/media/profile.8f43034a.jpg" />
+                    </div>
+                    <div style = {{padding:'10px  16px'}}>
+                        <h3>Europe Street beat</h3>
+                        <p>www.instagram.com</p>
+                    </div>
+                </Panel>
+            </Col>
+              <Col span = {4}>
+                <Panel  bodyStyle={{padding:'0px'}}>
+                    <div>
+                        <img alt="example" width="100%" src="http://huzzbuzz.coding.me/bear-admin/static/media/profile.8f43034a.jpg" />
+                    </div>
+                    <div style = {{padding:'10px  16px'}}>
+                        <h3>Europe Street beat</h3>
+                        <p>www.instagram.com</p>
+                    </div>
+                </Panel>
+            </Col>
+
         </Row>
         
    

@@ -24,7 +24,9 @@ import "@/common/tool.css"
 
 ReactDOM.render(
 <Router>
-    <Route  path="/" component={Layout}/>
+    <div style={{height:"100%"}}>
+        <Route  path="/" component={Layout}/>
+    </div>
 </Router>
 , document.getElementById('root'));
 registerServiceWorker();

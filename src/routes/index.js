@@ -1,7 +1,7 @@
 import React from "react"
 
 import { 
-    BrowserRouter as Router,
+    HashRouter as Router,
     Route,
     Link,
     Provider
@@ -16,6 +16,7 @@ import Form from "@/containers/Form"
 import Table from "@/containers/Table"
 import Page from "@/containers/Page"
 import Flex from "@/containers/Flex"
+import Button from "@/containers/Button"
 
 
 const LayoutRoutes = () => (
@@ -27,6 +28,7 @@ const LayoutRoutes = () => (
         <Route path = "/table" exact component = {Table} />
         <Route path = "/form" exact component = {Form} />
         <Route path = "/flex" exact component = {Flex} />
+         <Route path = "/button" exact component = {Button} />
     </div>
  )
 

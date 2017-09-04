@@ -1,7 +1,5 @@
 @import '~antd/dist/antd.css';
 
-@import "./tool.css";
-
 
 body {
   margin: 0;
@@ -26,6 +24,18 @@ body {
     height: auto;
     zoom: 1;
     display: block;
+}
+
+.ant-row [class^=ant-col] {
+   padding: 6px 8px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #777;
 }
 
 
