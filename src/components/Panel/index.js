@@ -2,7 +2,7 @@ import React from "react"
 
 import {Card }  from "antd"
 
-import styles from "@/components/Panel/panel.mod"
+import styles from "@/components/Panel/panel.module"
 
 
 /**

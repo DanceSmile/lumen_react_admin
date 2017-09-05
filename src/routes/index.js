@@ -17,7 +17,7 @@ import Table from "@/containers/Table"
 import Page from "@/containers/Page"
 import Flex from "@/containers/Flex"
 import Button from "@/containers/Button"
-
+import Compose from "@/containers/Compose"
 
 const LayoutRoutes = () => (
 
@@ -28,7 +28,8 @@ const LayoutRoutes = () => (
         <Route path = "/table" exact component = {Table} />
         <Route path = "/form" exact component = {Form} />
         <Route path = "/flex" exact component = {Flex} />
-         <Route path = "/button" exact component = {Button} />
+        <Route path = "/button" exact component = {Button} />
+         <Route path = "/compose" exact component = {Compose} />
     </div>
  )
 

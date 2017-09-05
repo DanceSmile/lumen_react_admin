@@ -1,3 +1,7 @@
+## redux-thunk
+
+https://segmentfault.com/a/1190000004236064
+
 ## js 中this的指向问题
 
 ## 提取模块公共代码
@@ -31,6 +35,7 @@ github 参考地址 ： https://github.com/ReactTraining/react-router
 官网地址： https://reacttraining.com/react-router/
 
 v3 -> v4 http://www.jianshu.com/p/ece5d02ccbcf
+
 
 ## 使用CSS Modules 解决css污染的问题
 

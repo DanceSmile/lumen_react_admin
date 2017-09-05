@@ -1,5 +1,5 @@
 import React from "react"
-import { Form, Input, Tooltip, Icon, Cascader, Select, Row, Col, Checkbox, Button, AutoComplete, } from 'antd';
+import { Form, Input, Tooltip, Icon, Cascader, Select, Row, Col, Checkbox, Button, AutoComplete } from 'antd';
 import Panel from "@/components/Panel"
 const FormItem = Form.Item;
 const Option = Select.Option;
@@ -29,7 +29,42 @@ const residences = [{
   }],
 }];
 
-class Forms extends React.Component {
+
+class Complete extends React.Component {
+
+  state = {
+    dataSource : [
+      "test"
+    ]
+  }
+
+  render() {
+
+    return (
+      <div>
+         <AutoComplete
+           dataSource={this.state.dataSource}
+           style={{ width: 200 }}
+           placeholder="在这里输入"
+           onSelect={(value)=>{console.log(`${value}`)}}
+           onSearch={ (value)=>{
+
+             this.setState({
+               dataSource:value?[
+                 value,
+                 value +'自动设置',
+                 value + '自动完成'
+               ]:[]
+             })
+           }}
+          >
+         </AutoComplete> 
+        </div>
+    )
+  }
+}
+
+class RegisterForm extends React.Component {
   state = {
     confirmDirty: false,
     autoCompleteResult: [],
@@ -105,22 +140,20 @@ class Forms extends React.Component {
         <Option value="86">+86</Option>
         <Option value="87">+87</Option>
       </Select>
-    );
+      );
 
     const websiteOptions = autoCompleteResult.map(website => (
       <AutoCompleteOption key={website}>{website}</AutoCompleteOption>
     ));
 
     return (
-    <Row >
-      <Col span = {12}>
-    <Panel title = "注册表单">
+
       <Form onSubmit={this.handleSubmit}>
         <FormItem
           {...formItemLayout}
           label="E-mail"
           hasFeedback
-        >
+          >
           {getFieldDecorator('email', {
             rules: [{
               type: 'email', message: 'The input is not valid E-mail!',
@@ -129,13 +162,13 @@ class Forms extends React.Component {
             }],
           })(
             <Input />
-          )}
+            )}
         </FormItem>
         <FormItem
           {...formItemLayout}
           label="Password"
           hasFeedback
-        >
+          >
           {getFieldDecorator('password', {
             rules: [{
               required: true, message: 'Please input your password!',
@@ -144,13 +177,13 @@ class Forms extends React.Component {
             }],
           })(
             <Input type="password" />
-          )}
+            )}
         </FormItem>
         <FormItem
           {...formItemLayout}
           label="Confirm Password"
           hasFeedback
-        >
+          >
           {getFieldDecorator('confirm', {
             rules: [{
               required: true, message: 'Please confirm your password!',
@@ -159,7 +192,7 @@ class Forms extends React.Component {
             }],
           })(
             <Input type="password" onBlur={this.handleConfirmBlur} />
-          )}
+            )}
         </FormItem>
         <FormItem
           {...formItemLayout}
@@ -172,38 +205,38 @@ class Forms extends React.Component {
             </span>
           )}
           hasFeedback
-        >
+          >
           {getFieldDecorator('nickname', {
             rules: [{ required: true, message: 'Please input your nickname!', whitespace: true }],
           })(
             <Input />
-          )}
+            )}
         </FormItem>
         <FormItem
           {...formItemLayout}
           label="Habitual Residence"
-        >
+          >
           {getFieldDecorator('residence', {
             initialValue: ['zhejiang', 'hangzhou', 'xihu'],
             rules: [{ type: 'array', required: true, message: 'Please select your habitual residence!' }],
           })(
             <Cascader options={residences} />
-          )}
+            )}
         </FormItem>
         <FormItem
           {...formItemLayout}
           label="Phone Number"
-        >
+          >
           {getFieldDecorator('phone', {
             rules: [{ required: true, message: 'Please input your phone number!' }],
           })(
             <Input addonBefore={prefixSelector} style={{ width: '100%' }} />
-          )}
+            )}
         </FormItem>
         <FormItem
           {...formItemLayout}
           label="Website"
-        >
+          >
           {getFieldDecorator('website', {
             rules: [{ required: true, message: 'Please input website!' }],
           })(
@@ -211,23 +244,23 @@ class Forms extends React.Component {
               dataSource={websiteOptions}
               onChange={this.handleWebsiteChange}
               placeholder="website"
-            >
+              >
               <Input />
             </AutoComplete>
-          )}
+            )}
         </FormItem>
         <FormItem
           {...formItemLayout}
           label="Captcha"
           extra="We must make sure that your are a human."
-        >
+          >
           <Row gutter={8}>
             <Col span={12}>
               {getFieldDecorator('captcha', {
                 rules: [{ required: true, message: 'Please input the captcha you got!' }],
               })(
                 <Input size="large" />
-              )}
+                )}
             </Col>
             <Col span={12}>
               <Button size="large">Get captcha</Button>
@@ -239,21 +272,46 @@ class Forms extends React.Component {
             valuePropName: 'checked',
           })(
             <Checkbox>I have read the <a href="">agreement</a></Checkbox>
-          )}
+            )}
         </FormItem>
         <FormItem {...tailFormItemLayout}>
           <Button type="primary" htmlType="submit">Register</Button>
         </FormItem>
       </Form>
-      </Panel>
-      </Col>
-      </Row>
+
     );
   }
 }
 
 
-const WrappedRegistrationForm = Form.create()(Forms);
+const WrappedRegistrationForm = Form.create()(RegisterForm);
 
 
-export default  WrappedRegistrationForm
+
+
+const Forms = () => (
+
+  <div>
+
+  
+    <Row >
+      <Col span={12}>
+        <Panel title="自动完成">
+          <Complete />
+        </Panel>
+      </Col>
+    </Row>
+
+    <Row >
+      <Col span={12}>
+        <Panel title="注册表单">
+          <WrappedRegistrationForm />
+        </Panel>
+      </Col>
+    </Row>
+  </div>
+
+)
+
+
+export default Forms;

@@ -2,7 +2,7 @@ import React from "react"
 
 import { Layout, Breadcrumb, Row, Col, BackTop }  from 'antd'
 
-import styles from "@/layouts/Content.mod"
+import styles from "@/layouts/Content.module"
 
  const {  Content:AntContent  } = Layout;
 

@@ -9,7 +9,6 @@ import {
 import registerServiceWorker from './registerServiceWorker';
 
 
-
 import Layout from "@/layouts/Layout.js";
 
 
@@ -17,6 +16,7 @@ import Layout from "@/layouts/Layout.js";
 
 import "@/common/common.less"
 import "@/common/tool.less"
+
 
 
 

@@ -2,7 +2,7 @@ import React from "react"
 
 import { Layout, Icon, Menu  }  from 'antd'
 
-import styles from  "@/layouts/Header.mod"
+import styles from  "@/layouts/Header.module"
 
 const {  Header:AntHeader  } = Layout;
 
