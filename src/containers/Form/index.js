@@ -1,5 +1,5 @@
 import React from "react"
-import { Form, Input, Tooltip, Icon, Cascader, Select, Row, Col, Checkbox, Button, AutoComplete } from 'antd';
+import { Form, Input, Tooltip, Icon, Cascader, Select, Row, Col, Checkbox, Button, AutoComplete,  BackTop } from 'antd';
 import Panel from "@/components/Panel"
 const FormItem = Form.Item;
 const Option = Select.Option;
@@ -309,6 +309,7 @@ const Forms = () => (
         </Panel>
       </Col>
     </Row>
+<BackTop visibilityHeight={1} target = { () => {return document.querySelector(".ant-layout")}} />
   </div>
 
 )
