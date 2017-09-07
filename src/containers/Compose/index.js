@@ -13,7 +13,8 @@ class  Index extends React.Component {
         return (
             <Row>
                 <Col span = {24}>
-                    <Card title = 'tets'>
+                    <Card>
+                        
                     </Card>
                 </Col>
             </Row>

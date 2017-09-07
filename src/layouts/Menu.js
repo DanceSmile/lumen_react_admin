@@ -19,7 +19,7 @@ class Menu extends  React.Component {
               inlineCollapsed={false}
           >
                     <AntMent.Item key="1">
-                        <Link to = "/" >
+                        <Link to = "/dashboard" >
                             <Icon type="pie-chart" />
                             <span>概览</span>
                         </Link>

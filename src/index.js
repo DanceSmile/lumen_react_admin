@@ -8,8 +8,8 @@ import {
  }  from "react-router-dom";
 import registerServiceWorker from './registerServiceWorker';
 
+import Routes from "@/routes"
 
-import Layout from "@/layouts/Layout.js";
 
 
 
@@ -24,9 +24,7 @@ import "@/common/tool.less"
 
 ReactDOM.render(
 <Router>
-    <div style={{height:"100%"}}>
-        <Route  path="/" component={Layout}/>
-    </div>
+    <Routes />
 </Router>
 , document.getElementById('root'));
 registerServiceWorker();

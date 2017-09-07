@@ -1,6 +1,13 @@
 import React from "react"
 
-import { Layout as AntLayout, BackTop }  from 'antd'
+import { Layout as AntLayout, BackTop, Spin  }  from 'antd'
+
+
+
+import  NProgress from  "nprogress"
+
+
+import "nprogress/nprogress.css"
 
 
 
@@ -27,10 +34,13 @@ import { LayoutRoutes } from "@/routes"
 
 
 
-import { Header, Sider, Content, Footer, Menu } from "@/layouts"
+import { Header, Sider, Content, Footer, Menu  } from "@/layouts"
 
 
 
+
+
+NProgress.configure({ showSpinner: false })
 
 
 
@@ -39,7 +49,8 @@ class Layout extends React.Component{
     constructor(props) {
         super(props)
         this.state = {
-            collapsed : false
+            collapsed : false,
+            loading:true
         }
     }
 
@@ -48,6 +59,30 @@ class Layout extends React.Component{
             collapsed: !this.state.collapsed,
         });
     }
+    componentWillUpdate(){
+       NProgress.start()
+       console.log('componentWillUpdate')
+    }
+    componentDidUpdate(){
+        NProgress.done()
+        console.log('componentDidUpdate')
+    }
+    componentDidMount(){
+        NProgress.done()
+        this.setState({
+             loading:false
+        })
+        console.log('componentDidMount')
+    }
+
+     componentWillUnmount() {
+         NProgress.start()
+         this.setState({
+             loading:true
+         })
+         console.log('componentWillUnmount')
+         
+    }
 
     render(){
         return (
@@ -55,14 +90,20 @@ class Layout extends React.Component{
                     <Sider collapsed = {this.state.collapsed} >
                         <Menu />
                     </Sider>
-                    <AntLayout>
+                    <AntLayout className = 'back-top'>
                         <Header  handleToggle = {this.toggle.bind(this)} >header</Header>
                         <Content>
-                            <LayoutRoutes />
+                              {this.state.loading ? <Spin />: this.props.children}
                         </Content>
                         <Footer>感谢 antd-design 为开源做出的贡献</Footer>
                         <div>
-                            <BackTop />
+                            <BackTop 
+                                target={
+                                    () => {
+                                        return document.querySelector(".back-top")
+                                    }
+                                }
+                            />
                         </div>
                     </AntLayout>
                 </AntLayout>
